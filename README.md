@@ -76,13 +76,6 @@ pizza-ai/
 
 ---
 
-## 🛡️ Boas Práticas
-- Nunca suba sua chave OpenAI real em repositórios públicos!
-- Use `.env` apenas localmente, `.env.example` para referência.
-- Commits limpos e scripts globais facilitam o desenvolvimento.
-
----
-
 ## 🤝 Contribuição
 Pull requests são super bem-vindos! Sinta-se à vontade para propor melhorias, abrir issues ou sugerir novas features.
 
@@ -90,10 +83,6 @@ Pull requests são super bem-vindos! Sinta-se à vontade para propor melhorias, 
 
 ## 📄 Licença
 MIT. Sinta-se livre para usar, modificar e compartilhar.
-
----
-
-Feito com ❤️ por Gustavo Minelli e colaboradores.
 
 ---
 
