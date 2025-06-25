@@ -1,3 +1,4 @@
+import React from "react";
 import { FaRobot, FaUserCircle } from "react-icons/fa";
 
 interface ChatMessageBubbleProps {
@@ -11,6 +12,17 @@ function formatHour(dateString?: string) {
   if (!dateString) return "";
   const date = new Date(dateString);
   return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+}
+
+// Função para parsear markdown simples (**bold**, *itálico*, __underline__)
+function parseSimpleMarkdown(text: string) {
+  // Bold: **text**
+  let parsed = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  // Italic: *text*
+  parsed = parsed.replace(/\*(.*?)\*/g, '<em>$1</em>');
+  // Underline: __text__
+  parsed = parsed.replace(/__(.*?)__/g, '<u>$1</u>');
+  return parsed;
 }
 
 export default function ChatMessageBubble({ role, content, createdAt, isLoading }: Readonly<ChatMessageBubbleProps>) {
@@ -37,7 +49,7 @@ export default function ChatMessageBubble({ role, content, createdAt, isLoading 
               <span className="inline-block w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
             </span>
           ) : (
-            content
+            <span dangerouslySetInnerHTML={{ __html: parseSimpleMarkdown(content) }} />
           )}
         </span>
         {createdAt && (
