@@ -10,7 +10,7 @@ O Chat Pizza! é um monorepo com frontend moderno (Next.js + React) e backend No
 ## 📦 Estrutura do Projeto
 
 ```
-pizza-ai/
+pizza-chat/
 ├── backend/      # API Node.js, TypeScript, integração OpenAI
 ├── frontend/     # Next.js, React, chat moderno e responsivo
 ├── package.json  # Monorepo, scripts globais
@@ -23,8 +23,8 @@ pizza-ai/
 
 1. **Clone o repositório:**
    ```bash
-   git clone git@github.com:GustavoMinelli/pizza-ai.git
-   cd pizza-ai
+   git clone git@github.com:GustavoMinelli/pizza-chat.git
+   cd pizza-chat
    ```
 2. **Instale as dependências:**
    ```bash
