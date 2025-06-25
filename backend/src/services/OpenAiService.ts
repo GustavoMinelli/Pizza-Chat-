@@ -16,8 +16,6 @@ export class OpenAIService {
             content: m.content,
         }));
 
-
-
         // Buscar itens do menu no banco de dados
         const repo = AppDataSource.getRepository(MenuItem);
         const pizzas = await repo.findBy({ type: MenuItemType.PIZZA });
@@ -27,9 +25,6 @@ export class OpenAIService {
         const pizzasList = pizzas.map(p => p.name).join(", ");
         const bebidasList = bebidas.map(b => b.name).join(", ");
         const sobremesasList = sobremesas.map(s => s.name).join(", ");
-
-        return "O gustavo está testando e nao quer gastar os tokens";
-
 
         const response = await openai.chat.completions.create({
             model: "gpt-4o",
@@ -47,8 +42,6 @@ export class OpenAIService {
                 ...mensagens
             ],
         });
-
-
 
         return response.choices[0].message?.content ?? "Desculpe, não consegui entender.";
     }
