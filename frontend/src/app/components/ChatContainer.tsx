@@ -13,7 +13,7 @@ export default function ChatContainer({ children }: { readonly children: ReactNo
 
       {/* Card do Chat */}
       <InfoCard
-        className="w-full flex-1 flex flex-col min-h-0"
+        className="w-full flex flex-col h-[650px]"
       >
         <div className="flex-1 flex flex-col gap-3 min-h-0">
           {children}
