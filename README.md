@@ -1,6 +1,6 @@
-# 🍕 Chat Pizza!
+# 🍕 Pizza Chat!
 
-Bem-vindo ao **Chat Pizza!**, um projeto de chatbot inteligente para pizzarias, feito para encantar clientes e facilitar pedidos com IA generativa.
+Bem-vindo ao **Pizza Chat!**, um projeto de chatbot inteligente para pizzarias, feito para encantar clientes e facilitar pedidos com IA generativa.
 
 ## 🚀 Visão Geral
 O Chat Pizza! é um monorepo com frontend moderno (Next.js + React) e backend Node.js/TypeScript, integrando OpenAI para conversas naturais e automação de atendimento.
