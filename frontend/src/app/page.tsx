@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState, FormEvent } from "react";
-import { FaPaperPlane, FaTrash, FaSpinner, FaRobot, FaUserCircle } from "react-icons/fa";
 import ChatContainer from "./components/ChatContainer";
 import ChatMessages, { Message } from "./components/ChatMessages";
 import ChatInput from "./components/ChatInput";

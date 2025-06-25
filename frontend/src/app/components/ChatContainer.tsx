@@ -3,7 +3,7 @@ import InfoCard from "./InfoCard";
 
 export default function ChatContainer({ children }: { readonly children: ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-transparent gap-6">
+    <div className="min-h-screen h-full flex flex-col items-center justify-center bg-transparent gap-6">
       {/* Card do Título */}
       <InfoCard
         title="Pizza Chat!"
@@ -13,9 +13,9 @@ export default function ChatContainer({ children }: { readonly children: ReactNo
 
       {/* Card do Chat */}
       <InfoCard
-        className="w-full min-h-[720px] h-[720px]"
+        className="w-full flex-1 flex flex-col min-h-0"
       >
-        <div className="flex-1 flex flex-col gap-3 rounded-full min-h-0">
+        <div className="flex-1 flex flex-col gap-3 min-h-0">
           {children}
         </div>
       </InfoCard>
@@ -23,7 +23,7 @@ export default function ChatContainer({ children }: { readonly children: ReactNo
      <InfoCard
         title="Bem-vindo ao Pizza Chat!"
         description="Peça sua pizza, tire dúvidas ou converse com nosso assistente inteligente. Atendimento rápido, prático e saboroso! 🍕"
-        className="mb-8 text-center"
+        className="text-center mb-3 hidden md:flex"
       />
 
     </div>
