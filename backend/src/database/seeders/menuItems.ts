@@ -1,5 +1,5 @@
-import { AppDataSource } from "../database/data-source";
-import { MenuItem, MenuItemType } from "../models/MenuItem";
+import { AppDataSource } from "../../database/data-source";
+import { MenuItem, MenuItemType } from "../../models/MenuItem";
 
 AppDataSource.initialize()
   .then(async () => {
@@ -25,7 +25,7 @@ AppDataSource.initialize()
     console.log("Seed concluído!");
     process.exit(0);
   })
-  .catch((err) => {
+  .catch((err: any) => {
     console.error("Erro ao rodar seed:", err);
     process.exit(1);
   });
